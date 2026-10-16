@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F3F1EB">
 
-  <title>coy kettles — form meets function</title>
+  <title>COY KETTLES — form meets function</title>
   <meta name="description" content="Coy Kettles. Form meets function.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,40 +27,19 @@
     }
 
     .page {
+      min-height: 100vh;
       min-height: 100svh;
       display: flex;
       flex-direction: column;
       padding: 28px;
     }
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-
-    .brand {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: lowercase;
-    }
-
-    .est {
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      color: #77766F;
-    }
-
     .main {
       flex: 1;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 48px 0;
+      padding: 12px 0 32px;
     }
 
     .visual {
@@ -85,30 +63,44 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.08);
+      background: rgba(0, 0, 0, 0.06);
     }
 
-    .loading {
+    .brand {
       color: #FFFFFF;
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: lowercase;
-      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.18);
+      font-size: clamp(25px, 5vw, 48px);
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.18);
     }
 
     .footer {
-      display: flex;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
       width: 100%;
+      padding-top: 8px;
     }
 
-    .tagline {
+    .est,
+    .loading {
       font-size: 10px;
       font-weight: 400;
-      letter-spacing: 0.24em;
-      text-transform: lowercase;
+      letter-spacing: 0.16em;
+      color: #77766F;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .est {
+      justify-self: start;
+    }
+
+    .loading {
+      justify-self: center;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
@@ -117,7 +109,7 @@
       }
 
       .main {
-        padding: 36px 0;
+        padding: 12px 0 28px;
       }
 
       .visual img {
@@ -125,16 +117,14 @@
       }
 
       .brand {
-        font-size: 12px;
+        font-size: clamp(22px, 6vw, 34px);
+        letter-spacing: 0.08em;
       }
 
-      .est {
-        font-size: 9px;
-      }
-
-      .tagline {
-        font-size: 9px;
-        letter-spacing: 0.2em;
+      .est,
+      .loading {
+        font-size: 8px;
+        letter-spacing: 0.1em;
       }
     }
   </style>
@@ -142,11 +132,6 @@
 
 <body>
   <div class="page">
-
-    <header class="header">
-      <div class="brand">coy kettles</div>
-      <div class="est">EST. 2026</div>
-    </header>
 
     <main class="main">
       <div class="visual">
@@ -156,13 +141,15 @@
         >
 
         <div class="overlay">
-          <div class="loading">product loading.</div>
+          <div class="brand">COY KETTLES</div>
         </div>
       </div>
     </main>
 
     <footer class="footer">
-      <div class="tagline">form meets function.</div>
+      <div class="est">EST. 2026</div>
+      <div class="loading">PRODUCT LOADING...</div>
+      <div></div>
     </footer>
 
   </div>
