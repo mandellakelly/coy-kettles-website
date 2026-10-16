@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F3F1EB">
+
+  <title>coy kettles — form meets function</title>
+  <meta name="description" content="Coy Kettles. Form meets function.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #F3F1EB;
+      color: #292923;
+      font-family: 'DM Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+    }
+
+    .est {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: #77766F;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 0;
+    }
+
+    .visual {
+      position: relative;
+      width: min(100%, 900px);
+      overflow: hidden;
+      background: #E5E1D8;
+    }
+
+    .visual img {
+      display: block;
+      width: 100%;
+      height: min(65vh, 650px);
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .loading {
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.18);
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .tagline {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      text-transform: lowercase;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 20px;
+      }
+
+      .main {
+        padding: 36px 0;
+      }
+
+      .visual img {
+        height: 58vh;
+      }
+
+      .brand {
+        font-size: 12px;
+      }
+
+      .est {
+        font-size: 9px;
+      }
+
+      .tagline {
+        font-size: 9px;
+        letter-spacing: 0.2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="header">
+      <div class="brand">coy kettles</div>
+      <div class="est">EST. 2026</div>
+    </header>
+
+    <main class="main">
+      <div class="visual">
+        <img
+          src="coy-kettles.gif"
+          alt="Coy Kettles product preview"
+        >
+
+        <div class="overlay">
+          <div class="loading">product loading.</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="tagline">form meets function.</div>
+    </footer>
+
+  </div>
+</body>
+</html>
